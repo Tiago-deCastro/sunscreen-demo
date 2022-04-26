@@ -171,7 +171,7 @@ body {
   display: flex;
   justify-content: right;
   align-items: center;
-  transform: translateX(-75px);
+  transform: translateX(-90px);
   text-decoration: none;
   border: none;
 }
@@ -179,12 +179,12 @@ body {
 .dd_menu_ul {
   position: absolute;
   z-index: 1;
-  background: transparent;
+  background: #f5f5f5;
   margin-top: 25px;
   border-radius: 5px;
   width: 130px;
   transform: translateX(-10px);
-  /*   box-shadow: 2px 4px 4px 2px #00000040; */
+  box-shadow: 2px 4px 4px 2px #00000040;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
@@ -212,7 +212,7 @@ body {
 }
 
 .dd_menu ul li :hover {
-  /*  background-color: #f2d2ca; */
+  background-color: #f2d2ca;
   opacity: 0.5;
 }
 
