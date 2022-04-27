@@ -25,19 +25,15 @@
 }
 
 body {
-  /*   align-items: flex-start; */
-  /*   display: flex; */
   height: 100vh;
   overflow: hidden;
   background: url("./assets/Group\ 2.svg");
-
   background-repeat: no-repeat;
   background-position: right -150px top 25%;
-
   margin: 0 auto;
 }
 
-.container {
+.main-container {
   align-items: center;
   max-width: 1274px;
   height: 100vh;
@@ -45,66 +41,13 @@ body {
   padding: 0 4px;
 }
 
-.protect-your {
-  display: flex;
-}
-
-.protect {
-  -webkit-text-stroke: 3px var(--black);
-  color: var(--black);
-  font-family: var(--font-family-almarai);
-  font-size: var(--font-size-l);
-  font-weight: 400;
-  letter-spacing: 0;
-  text-shadow: 0px 4px 4px #00000040;
-  margin-top: 10vh;
-  opacity: 0;
-  transform: translateY(5px);
-  animation: protectYourSkin 0.5s ease-in forwards 0.5s;
-}
-
-.your {
-  -webkit-text-stroke: 3px var(--black);
-  color: var(--black);
-  font-family: var(--font-family-almarai);
-  font-size: var(--font-size-l);
-  font-weight: 400;
-  letter-spacing: 0;
-  text-shadow: 0px 4px 4px #00000040;
-  position: inherit;
-  margin-top: 10vh;
-  margin-left: 3vh;
-  opacity: 0;
-  transform: translateY(5px);
-  animation: protectYourSkin 0.5s ease-in forwards 1s;
-}
-
-.skin {
-  -webkit-text-stroke: 3px var(--black);
-  color: var(--black);
-  font-family: var(--font-family-almarai);
-  font-size: var(--font-size-l);
-  font-weight: 400;
-  letter-spacing: 0;
-  text-shadow: 0px 4px 4px #00000040;
-  opacity: 0;
-  transform: translateY(5px);
-  animation: protectYourSkin 0.5s ease-in forwards 1.5s;
-}
-
-/* Animations */
-
-@keyframes protectYourSkin {
-  to {
-    transform: translateY(0px);
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
+/* navbar */
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 5vh;
 }
 
 .sunscreen {
@@ -113,17 +56,7 @@ body {
   font-weight: 700;
   font-size: 48px;
   display: flex;
-
-  margin-top: 10vh;
-}
-
-.protect-your-skin {
-  margin-top: 5%;
-}
-
-.protect-your-skin,
-.sunscreen {
-  position: relative;
+  flex: 1;
 }
 
 .list-item {
@@ -132,11 +65,16 @@ body {
   font-weight: 400;
   font-size: 24px;
   line-height: 27px;
-  display: block;
-  /* identical to box height */
-
+  display: block;  
   color: #000000;
   text-decoration: none;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  width: 90vh;
+  flex: 1;
 }
 
 .products {
@@ -145,13 +83,6 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-}
-
-.navbar-list {
-  display: flex;
-  justify-content: space-between;
-  width: 90vh;
-  margin-top: 11vh;
 }
 
 .list-item:hover {
@@ -175,6 +106,8 @@ body {
   text-decoration: none;
   border: none;
 }
+
+/* dropdown menu */
 
 .dd_menu_ul {
   position: absolute;
@@ -231,4 +164,82 @@ body {
 .rotateArrow {
   transform: rotate(180deg);
   transition: all 0.4s ease-in-out;
+}
+
+/* Section1 */
+
+.section1 {
+  display: grid;
+  grid-template-columns:  10%, 1fr, 1fr, 10%  ;
+}
+
+.protect-your-skin {
+  grid-column: 1/2;
+  margin-left: 5vh;
+}
+
+.protect-your {
+  display: flex;
+}
+
+.protect {
+  -webkit-text-stroke: 3px var(--black);
+  color: var(--black);
+  font-family: var(--font-family-almarai);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-shadow: 0px 4px 4px #00000040;
+  margin-top: 10vh;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: protectYourSkin 0.5s ease-in forwards 0.5s;
+}
+
+.your {
+  -webkit-text-stroke: 3px var(--black);
+  color: var(--black);
+  font-family: var(--font-family-almarai);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-shadow: 0px 4px 4px #00000040;
+  position: inherit;
+  margin-top: 10vh;
+  margin-left: 3vh;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: protectYourSkin 0.5s ease-in forwards 1s;
+}
+
+.skin {
+  -webkit-text-stroke: 3px var(--black);
+  color: var(--black);
+  font-family: var(--font-family-almarai);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-shadow: 0px 4px 4px #00000040;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: protectYourSkin 0.5s ease-in forwards 1.5s;
+}
+
+.protect-your-skin {
+  margin-top: 5%;
+}
+
+.protect-your-skin,
+.sunscreen {
+  position: relative;
+}
+
+/* Animations */
+
+@keyframes protectYourSkin {
+  to {
+    transform: translateY(0px);
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
