@@ -4,6 +4,7 @@
   font-family: var(--font-family-almarai);
   font-size: var(--font-size-m);
   font-weight: 100;
+  line-height: 27px;
   letter-spacing: 0;
   text-shadow: 0px 4px 4px #00000040;
 }
