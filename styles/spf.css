@@ -1,0 +1,52 @@
+.section1 p{
+  -webkit-text-stroke: 1px var(--black);
+  color: var(--black);
+  font-family: var(--font-family-almarai);
+  font-size: var(--font-size-m);
+  font-weight: 100;
+  letter-spacing: 0;
+  text-shadow: 0px 4px 4px #00000040;
+}
+
+.spfimage {
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: left;
+  margin-right: 5vh;
+  margin-left: 10vh;
+  opacity: 0;
+  transform: translateY(5px);
+  animation: mainText 0.5s ease-in forwards 2s;
+}
+
+.spfimage img {
+  max-height: 400px;
+}
+
+@media screen and (max-width: 900px) {
+
+  * {
+    overflow: visible;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  .section1{
+    display: grid;
+    grid-template-columns:  1fr;
+ 
+  }
+  
+  .spfimage {
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 50px;
+  }
+
+  .spfimage img {
+    max-height: 300px;
+  }
+}
