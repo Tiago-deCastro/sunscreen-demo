@@ -1,0 +1,21 @@
+.main-text2 form {
+  margin: 10vh;
+}
+
+.main-text2 form{
+  -webkit-text-stroke: 1px var(--black);
+  color: var(--black);
+  font-family: var(--font-family-almarai);
+  font-size: var(--font-size-m);
+  font-weight: 100;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-shadow: 0px 4px 4px #00000040;
+}
+
+@media screen and (max-width: 556px) {
+  .main-text2 form {
+    margin: 0;
+    margin-top: 5vh;
+  }
+}
